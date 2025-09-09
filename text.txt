@@ -1,0 +1,30 @@
+Absolutely — I’ve added Saudi Arabia (SAR), U.A.E. (AED), European Union (EUR), Pakistan (PKR), and Vietnam (VND) to the dataset and visuals, with their FX codes shown in each node.
+
+I pulled official, monthly U.S.→partner exports and partner→U.S. imports for Jan–Jun 2025 (pre = Jan–May average; post = June 2025). For the EU, the Jan figure wasn’t in the “view-all” feed I fetched, so the EU “pre” uses Feb–May as a proxy (I flagged that in the table). Sources are the U.S. Census/BEA series hosted on FRED.
+	•	EU: Exports to EU in June were $35.8B (≈ +6% vs pre), while EU imports to the U.S. were $45.7B (≈ −27% vs pre).  ￼
+	•	Saudi Arabia: U.S. exports $1.10B (≈ −5%), U.S. imports $0.97B (≈ +11%).  ￼
+	•	U.A.E.: U.S. exports $2.22B (≈ +20%), U.S. imports $0.77B (≈ +5%).  ￼
+	•	Pakistan: U.S. exports $0.16B (≈ −35%), U.S. imports $0.35B (≈ −22%).  ￼
+	•	Vietnam: U.S. exports $1.35B (≈ +18%), U.S. imports $17.7B (≈ +26%).  ￼
+
+You can explore the full table I generated (“US–New Partners Trade Snapshot (Pre vs Jun 2025, USD millions)”) in the sheet I opened above, and you can also grab the raw data here:
+Download the CSV
+
+What you’ll see in the updated network charts
+	•	I added two network plots: Pre (Jan–May average) vs Post (June 2025). Edge thickness = trade value, arrows show direction (U.S.→partner = exports; partner→U.S. = imports). The nodes include the FX codes (USD, EUR, SAR, AED, PKR, VND).
+	•	Notable post-June shifts: Vietnam’s edge into the U.S. thickens meaningfully (import surge), EU’s inbound edge thins (imports down), U.A.E. shows a pop in U.S. exports, and Pakistan softens on both directions. (All deltas above come straight from the monthly series.)  ￼
+
+Why this matters for your tariffs + FX read
+	•	June 2025 marks your post-tariff snapshot. The Vietnam jump and EU dip are consistent with near-term trade diversion toward lower-tariff or tariff-circumvention routes, while energy-linked flows (e.g., Saudi Arabia) look more tied to commodity dynamics than the tariff schedule itself. These patterns are the kinds of things that can feed into your SURF and hedge overlays: rising U.S. imports from VNM may correlate with VND-sensitive exporters and margin impacts for U.S. competitors; softer EU-to-U.S. flows can map to EUR exposure in sectors most impacted by the tariff basket.
+	•	With FX on the nodes, you can now test scenarios like: “If USD strengthens vs VND while U.S. imports from Vietnam stay elevated, what does that imply for pricing power and downstream U.S. CPI components?”
+
+If you’d like, I can extend these exact visuals across the rest of your core set (China, India, Japan, South Korea, Taiwan, Singapore, Canada, Mexico, Russia, Saudi, U.A.E., EU, Pakistan, Vietnam), plus key non-U.S. bilateral lanes (e.g., Saudi↔China, India↔China) to complete the world money-flow picture.
+
+Sources (monthly, NSA):
+	•	EU exports & imports series: EXP0003, IMP0003.  ￼
+	•	Saudi Arabia: EXP5170, IMP5170.  ￼
+	•	United Arab Emirates: EXP5200, IMP5200.  ￼
+	•	Pakistan: EXP5350, IMP5350.  ￼
+	•	Vietnam: EXP5520, IMP5520.  ￼
+
+Want me to fold these five into the big, all-countries pre/post network you asked for next?
