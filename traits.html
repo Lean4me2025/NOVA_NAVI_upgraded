@@ -1,1 +1,39 @@
-<!doctype html><html><body><h2>Traits Page</h2></body></html>
+
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>NOVA — Traits</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<div class="container">
+  <div class="header"><h2>Your Traits</h2><a class="badge" href="index.html">← Back</a></div>
+  <div class="card grid">
+    <div><h3>Focus</h3>
+      <label><input type="checkbox" name="trait" value="analytical"> Analytical</label>
+      <label><input type="checkbox" name="trait" value="creative"> Creative</label>
+      <label><input type="checkbox" name="trait" value="hands-on"> Hands‑on</label>
+      <label><input type="checkbox" name="trait" value="social"> Social / People‑first</label>
+    </div>
+    <div><h3>Work Style</h3>
+      <label><input type="checkbox" name="trait" value="independent"> Independent</label>
+      <label><input type="checkbox" name="trait" value="collaborative"> Collaborative</label>
+      <label><input type="checkbox" name="trait" value="structured"> Structured</label>
+      <label><input type="checkbox" name="trait" value="flexible"> Flexible</label>
+    </div>
+    <div><h3>Education / Zone</h3>
+      <label><input type="radio" name="zone" value="1"> Job Zone 1</label>
+      <label><input type="radio" name="zone" value="2"> Job Zone 2</label>
+      <label><input type="radio" name="zone" value="3"> Job Zone 3</label>
+      <label><input type="radio" name="zone" value="4"> Job Zone 4</label>
+      <label><input type="radio" name="zone" value="5"> Job Zone 5</label>
+    </div>
+  </div>
+  <div style="margin-top:16px;text-align:right"><button class="btn primary" id="toResults">See Matches</button></div>
+</div>
+<script>
+document.getElementById('toResults').addEventListener('click', () => {
+  const traits = Array.from(document.querySelectorAll('input[name=trait]:checked')).map(x=>x.value);
+  const zone = document.querySelector('input[name=zone]:checked')?.value || '';
+  sessionStorage.setItem('nova_traits', JSON.stringify({ traits, zone }));
+  window.location.href = 'results.html';
+});
+</script>
+</body></html>

@@ -1,1 +1,19 @@
-<!doctype html><html><body><h2>Navi Page</h2></body></html>
+
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>NAVI</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<div class="container">
+  <div class="header"><h2>Welcome to NAVI</h2><a class="badge" href="results.html">← Back to Results</a></div>
+  <div class="card center">
+    <p>Press play to hear Navi’s intro.</p>
+    <div class="cta"><button id="playNavi" class="btn primary">Play Navi Intro</button></div>
+    <audio id="naviAudio" preload="auto"><source src="audio/navi_intro.mp3" type="audio/mpeg"></audio>
+  </div>
+</div>
+<script>
+document.getElementById('playNavi').addEventListener('click', async () => {
+  try { await document.getElementById('naviAudio').play(); } catch(e) { alert('Could not play audio.'); }
+});
+</script>
+</body></html>
